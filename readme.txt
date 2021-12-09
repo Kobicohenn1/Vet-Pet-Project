@@ -1,1 +1,1 @@
-pavel shoter
+dorel maniak
