@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1013229699190",
+    "firebase_url": "https://vetpet-d772a-default-rtdb.firebaseio.com",
+    "project_id": "vetpet-d772a",
+    "storage_bucket": "vetpet-d772a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013229699190:android:a91b5a413b4aa1b5651f57",
+        "android_client_info": {
+          "package_name": "com.example.myfirstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013229699190-hpolkgf6pj5jka3f8746a8bldj49rps7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACxCSJnHmK-WrCKKto83z7IwRlFL5eU-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013229699190-hpolkgf6pj5jka3f8746a8bldj49rps7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013229699190:android:5f525199ee9fbe75651f57",
+        "android_client_info": {
+          "package_name": "com.example.vetpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013229699190-hpolkgf6pj5jka3f8746a8bldj49rps7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACxCSJnHmK-WrCKKto83z7IwRlFL5eU-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013229699190-hpolkgf6pj5jka3f8746a8bldj49rps7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

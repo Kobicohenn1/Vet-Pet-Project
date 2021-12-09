@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddAnimal">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/logo"
+        android:paddingVertical="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="Add Animal Details"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="Choose Your Animal"
+        android:layout_gravity="left"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnDog"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="#2196F3"
+            android:text="Dog"
+            android:textSize="15dp" />
+
+
+        <Button
+            android:id="@+id/btnCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#9E42B3"
+            android:text="Cat"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <EditText
+        android:hint="Breed"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:id="@+id/editNameVetReg"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:hint="Age"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:maxLength="8"
+        android:id="@+id/editPassVetReg1"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:hint="Wight"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:maxLength="8"
+        android:id="@+id/editPassVetReg2"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/btnSUVet"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:text="Confirm"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="left"
+        android:background="@drawable/dog"
+        android:paddingVertical="100dp" />
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right"
+        android:background="@drawable/cat"
+        android:paddingVertical="100dp" />
+
+
+</LinearLayout>
