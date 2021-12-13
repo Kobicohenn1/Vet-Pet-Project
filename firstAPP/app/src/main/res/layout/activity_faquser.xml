@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <ImageView
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:layout_gravity="center"
+      android:background="@drawable/logo"
+      android:paddingVertical="100dp" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="5dp"
+      android:text="שאלות נפוצות לכלב"
+      android:layout_gravity="right"
+      android:textSize="20dp"/>
+
+  <Button
+      android:text="מדוע הכלב לא אוכל את האוכל שלו?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:textColor="@color/white"
+      android:id="@+id/btnDogEat"
+      android:textSize="11sp"
+      />
+
+  <Button
+      android:text="איך לטפל בכוויות בכפות הרגליים?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnDogBurn"
+      android:textSize="11sp"
+      />
+  <Button
+      android:text="מה הם הנהלים כשכלב נשך אדם?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnDogBit"
+      android:textSize="11sp"
+      />
+
+  <Button
+      android:text="אילו טיפולים וטרינריים כלב עובר בכל שנה?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnDogTreatments"
+      android:textSize="11sp"
+      />
+
+  <Button
+      android:text="האם כדאי לסרס/לעקר את הכלב שלי?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnDogNeutering"
+      android:textSize="11sp"
+      />
+  <Button
+      android:text="האם אילוף מדכא את הכלב?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnDogTrain"
+      android:textSize="11sp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:padding="5dp"
+      android:layout_marginTop="10dp"
+      android:text="שאלות נפוצות לחתול"
+      android:textSize="20dp" />
+
+  <Button
+      android:text="האם צריך לתת חיסונים לחתולים?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:textColor="@color/white"
+      android:id="@+id/btnCatVaccine"
+      android:textSize="11sp"
+      />
+
+  <Button
+      android:text="האם מותר לרחוץ חתולים?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnCatWash"
+      android:textSize="11sp"
+      />
+  <Button
+      android:text="מה זה מחלת שריטת החתול?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnCatMarch"
+      android:textSize="11sp"
+      />
+
+  <Button
+      android:text="כמה פעמים ביום חתול צריך לאכול?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnCatEat"
+      android:textSize="11sp"
+      />
+
+  <Button
+      android:text="האם צריך לתת לגורי חתולים חלב?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnCatMilk"
+      android:textSize="11sp"
+      />
+  <Button
+      android:text="מדוע החתול שלי לא עושה את צרכיו בארגז החול?"
+      android:layout_width="240dp"
+      android:layout_height="50dp"
+      android:layout_gravity="right"
+      android:backgroundTint="#5A5656"
+      android:id="@+id/btnCatPoop"
+      android:textSize="11sp"
+      />
+</LinearLayout>
