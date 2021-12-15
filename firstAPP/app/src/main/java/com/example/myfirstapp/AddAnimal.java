@@ -62,7 +62,7 @@ public class AddAnimal extends AppCompatActivity implements View.OnClickListener
             clickCat=true;
             clickDog=false;
             btnCat.setBackgroundColor(Color.parseColor("#8b0000"));
-            btnDog.setBackgroundColor(Color.parseColor("#2196F3"));
+            btnDog.setBackgroundColor(Color.parseColor("#DFD5C5"));
 
         }
         if (btnDog==v)
@@ -70,7 +70,7 @@ public class AddAnimal extends AppCompatActivity implements View.OnClickListener
             clickCat=false;
             clickDog=true;
             btnDog.setBackgroundColor(Color.parseColor("#8b0000"));
-            btnCat.setBackgroundColor(Color.parseColor("#FAAA35"));
+            btnCat.setBackgroundColor(Color.parseColor("#DFD5C5"));
 
         }
         if(btnConfirm==v)

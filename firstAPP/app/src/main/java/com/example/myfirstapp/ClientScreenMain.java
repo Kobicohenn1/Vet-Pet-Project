@@ -16,7 +16,10 @@ import com.google.firebase.database.DataSnapshot;
 public class ClientScreenMain extends AppCompatActivity implements View.OnClickListener {
     private TextView welcome;
     private Button btnAdd;
-    User u;
+    private Button logout;
+
+    FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +29,13 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
 
         welcome=(TextView) findViewById(R.id.welcomeClient);
         btnAdd=(Button)findViewById(R.id.btn_Add);
-
+        logout=(Button)findViewById(R.id.btnLogOutClient);
         welcome.setText("welcome:"+"");
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
         btnAdd.setOnClickListener(this);
-
+        logout.setOnClickListener(this);
     }
 
     @Override
@@ -39,8 +43,12 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
 
         if (btnAdd==v)
         {
-            startActivity(new Intent(getApplicationContext(),AddAnimal.class));
-
+            startActivity(new Intent(this,AddAnimal.class));
+        }
+        if (logout==v)
+        {
+            firebaseAuth.signOut();
+            startActivity(new Intent(this,MainActivity.class));
         }
     }
 }

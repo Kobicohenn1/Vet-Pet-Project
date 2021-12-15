@@ -29,5 +29,15 @@
             android:text="Add your animal"
             android:background="@android:color/black"/>
 
+        <Button
+            android:id="@+id/btnLogOutClient"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#A61717"
+            android:text="Log Out"
+            android:textSize="15dp"
+                />
 
 </LinearLayout>
