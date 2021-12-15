@@ -10,13 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
-
+            android:name=".ClientScreenMain"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivityVet"
             android:exported="false" />
         <activity
             android:name=".VetScreen"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".AddAnimal"
             android:exported="false" />
@@ -29,7 +30,6 @@
         <activity
             android:name=".RegVetActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

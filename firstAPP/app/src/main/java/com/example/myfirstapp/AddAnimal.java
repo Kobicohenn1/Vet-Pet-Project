@@ -1,13 +1,30 @@
 package com.example.myfirstapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.lang.ref.Reference;
 
 public class AddAnimal extends AppCompatActivity implements View.OnClickListener {
+
+    private  FirebaseDatabase database;
+    private DatabaseReference myRef;
+
 
     private EditText breed,age,weight;
     private Button btnDog,btnCat,btnConfirm;
@@ -19,6 +36,10 @@ public class AddAnimal extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_animal);
+
+
+        database=FirebaseDatabase.getInstance();
+
 
         breed=(EditText) findViewById(R.id.editBreed);
         age=(EditText) findViewById(R.id.editAge);
@@ -40,11 +61,17 @@ public class AddAnimal extends AppCompatActivity implements View.OnClickListener
         {
             clickCat=true;
             clickDog=false;
+            btnCat.setBackgroundColor(Color.parseColor("#8b0000"));
+            btnDog.setBackgroundColor(Color.parseColor("#2196F3"));
+
         }
         if (btnDog==v)
         {
             clickCat=false;
             clickDog=true;
+            btnDog.setBackgroundColor(Color.parseColor("#8b0000"));
+            btnCat.setBackgroundColor(Color.parseColor("#FAAA35"));
+
         }
         if(btnConfirm==v)
         {
@@ -80,15 +107,47 @@ public class AddAnimal extends AppCompatActivity implements View.OnClickListener
             return;
         }
 
-        if((clickCat==true)||(clickDog==true))
+        if((clickCat)||(clickDog))
         {
-            if(clickCat==true)
+            if(clickCat)
             {
+
                 Cat cat=new Cat(strBreed,strAge,strWeight);
+                myRef=database.getReference("Cat");
+
+                DatabaseReference userRef = database.getReference("Users");
+
+                userRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Cat")
+                        .setValue(cat).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task)
+                    {
+                        if(task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Added Cat successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), ClientScreenMain.class));
+
+                        }
+                    }
+                });
             }
-            if(clickDog=true)
+             else if(clickDog)
             {
                 Dog dog=new Dog(strBreed,strAge,strWeight);
+                myRef=database.getReference("Dog");
+                DatabaseReference userRef = database.getReference("Users");
+
+                userRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Dog")
+                        .setValue(dog).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Added Dog successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), ClientScreenMain.class));
+
+                        }
+                    }
+                });
+
             }
         }
 

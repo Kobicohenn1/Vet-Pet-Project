@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete (@NonNull Task < AuthResult > task) {
                                 if (task.isSuccessful()) {
-                                    startActivity(new Intent(context, AddAnimal.class));
+                                    startActivity(new Intent(context,ClientScreenMain.class));
                                 } else {
                                     Toast.makeText(context, "faild to login!", duration).show();
                                 }

@@ -123,7 +123,7 @@ public class RegClientActivity extends AppCompatActivity implements View.OnClick
                 CharSequence textE = "This user already Exits";
                 if(task.isSuccessful())
                 {
-                    User user=new User(name,mail);
+                    User user=new User(name,mail,pNum);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
