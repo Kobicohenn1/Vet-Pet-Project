@@ -34,8 +34,17 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
+            android:text="FAQ -"
+            android:background="@android:color/black"/>
+        <Button
+            android:id="@+id/btn_Faq"
+            android:layout_marginTop="10dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:text="Health Life Tips"
             android:background="@android:color/black"/>
+
 
         <Button
             android:id="@+id/btnLogOutClient"

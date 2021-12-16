@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ClientScreenMain extends AppCompatActivity implements View.OnClickListener {
     private TextView welcome;
-    private Button btnAdd,btnLife;
+    private Button btnAdd,btnLife,btnFaq;
     private Button logout;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -37,6 +37,7 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnAdd=(Button)findViewById(R.id.btn_Add);
         logout=(Button)findViewById(R.id.btnLogOutClient);
         btnLife=(Button)findViewById(R.id.btn_Health) ;
+        btnFaq=(Button)findViewById(R.id.btn_Faq) ;
 
         firebaseAuth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();// this user
@@ -44,6 +45,7 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnAdd.setOnClickListener(this);
         logout.setOnClickListener(this);
         btnLife.setOnClickListener(this);
+        btnFaq.setOnClickListener(this);
 
         reference= FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
         reference.addValueEventListener(new ValueEventListener() {
@@ -70,6 +72,11 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         if(btnLife==v)
         {
             startActivity(new Intent(this,HealthLifeTips.class));
+        }
+        if(btnFaq==v)
+        {
+            startActivity(new Intent(this,FAQUser.class));
+
         }
         if (logout==v)
         {

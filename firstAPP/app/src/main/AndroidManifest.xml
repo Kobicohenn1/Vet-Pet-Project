@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".FAQUser"
+            android:exported="false" />
+        <activity
             android:name=".HealthLifeTips"
             android:exported="false" />
         <activity
