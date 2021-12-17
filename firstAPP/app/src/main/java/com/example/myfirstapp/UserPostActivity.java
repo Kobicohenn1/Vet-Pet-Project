@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -50,10 +51,13 @@ public class UserPostActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Post p = posts.get(position);
-                DatabaseReference current = FirebaseDatabase.getInstance().getReference("Post");
+                DatabaseReference current = FirebaseDatabase.getInstance().getReference("Post/" + p.key);
                 current.removeValue();
-                return true;
+                Toast.makeText(UserPostActivity.this, "Successfully deleted ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UserPostActivity.this, ClientScreenMain.class);
+                startActivity(intent);
 
+                return true;
 
             }
         });
