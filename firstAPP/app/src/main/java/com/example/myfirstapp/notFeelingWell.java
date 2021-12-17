@@ -25,94 +25,43 @@ public class notFeelingWell extends AppCompatActivity implements View.OnClickLis
 
     EditText etTitle, etBody;
     Button btnSave;
-    FirebaseUser user;
 
-    FirebaseDatabase database;
-    DatabaseReference myRef;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference postRef;
 
-    Post p;
-    boolean btnC=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_not_feeling_well);
 
-        database=FirebaseDatabase.getInstance();
+        firebaseDatabase=FirebaseDatabase.getInstance();
+
         etTitle = (EditText) findViewById(R.id.EDITsub);
         etBody = (EditText) findViewById(R.id.editBody);
         btnSave = (Button) findViewById(R.id.saveNFW);
         btnSave.setOnClickListener(this);
 
-
-        user = FirebaseAuth.getInstance().getCurrentUser();// this user
-
-
-
-
-
     }
 
 
-    public void retrieveData() {
-
-        String title=etTitle.getText().toString().trim();
-        String body=etBody.getText().toString().trim();
-
-        if (title.isEmpty())
-        {
-            etTitle.setError("Enter Title");
-            etTitle.requestFocus();
-            return;
-        }
-        if (body.isEmpty())
-        {
-            etBody.setError("Enter Body Text");
-            etBody.requestFocus();
-            return;
-        }
-
-            Post p1 = new Post(body, title);
-            myRef = database.getReference("Post");
-
-            DatabaseReference postRef = database.getReference("Users");
-
-        postRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Post")
-                    .setValue(p1).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(getApplicationContext(), "Send", Toast.LENGTH_SHORT).show();
-
-                        startActivity(new Intent(getApplicationContext(), ClientScreenMain.class));
-
-                    }
-                }
-            });
-     //   postRef = database.getReference("User" );
-//
-//        p1.title = etTitle.getText().toString();
-//        p1.body = etBody.getText().toString();
-//        postRef.setValue(p1);
-//
-//        finish();
-
-
-
-
-    }
 
     @Override
     public void onClick(View v) {
         if (btnSave == v) {
-            retrieveData();
+            String uid=FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
+            Post p=new Post(uid,etTitle.getText().toString(),etBody.getText().toString(),"");
+            postRef=firebaseDatabase.getReference("Post").push();
+            p.key=postRef.getKey();
+            postRef.setValue(p);
+            Toast.makeText(notFeelingWell.this, "Send", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(notFeelingWell.this, ClientScreenMain.class);
+            startActivity(intent);
         }
-
-
-
-
-
     }
+
+
+
 
 }
 
