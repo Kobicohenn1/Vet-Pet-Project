@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ClientScreenMain extends AppCompatActivity implements View.OnClickListener {
     private TextView welcome;
-    private Button btnAdd,btnLife,btnFaq;
+    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell;
     private Button logout;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -38,7 +38,8 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         logout=(Button)findViewById(R.id.btnLogOutClient);
         btnLife=(Button)findViewById(R.id.btn_Health) ;
         btnFaq=(Button)findViewById(R.id.btn_FAQ) ;
-
+        btnnfw=(Button)findViewById(R.id.btn_NFWell) ;
+        btnAnsFell=(Button)findViewById(R.id.btn_NFWellAnswer) ;
         firebaseAuth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();// this user
 
@@ -46,6 +47,8 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         logout.setOnClickListener(this);
         btnLife.setOnClickListener(this);
         btnFaq.setOnClickListener(this);
+        btnnfw.setOnClickListener(this);
+        btnAnsFell.setOnClickListener(this);
         reference= FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -64,6 +67,15 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
 
+        if(btnnfw==v)
+        {
+            startActivity(new Intent(this,notFeelingWell.class));
+        }
+        if(btnAnsFell==v)
+        {
+            startActivity(new Intent(this,UserPostActivity.class));
+
+        }
         if (btnAdd==v)
         {
             startActivity(new Intent(this,AddAnimal.class));
