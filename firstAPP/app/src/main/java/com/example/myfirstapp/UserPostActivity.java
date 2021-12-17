@@ -74,9 +74,9 @@ public class UserPostActivity extends AppCompatActivity {
                     posts = new ArrayList<Post>();
                     for (DataSnapshot data : dataSnapshot.getChildren()) {
                         Post p = data.getValue(Post.class);
+                        if (p.uid.equals(uid)) {
 
                             posts.add(p);
-                        if (p.uid.equals(uid)) {
                             allPostAdapter = new AllPostAdapter(UserPostActivity.this, 0, 0, posts);
                             lv.setAdapter(allPostAdapter);
                         }

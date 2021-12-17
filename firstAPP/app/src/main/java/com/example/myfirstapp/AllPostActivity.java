@@ -3,10 +3,12 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.behavior.SwipeDismissBehavior;
@@ -28,10 +30,12 @@ public class AllPostActivity extends AppCompatActivity {
     private DatabaseReference database;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_post_activity);
+
 
         database = FirebaseDatabase.getInstance().getReference("Post");
         lv = (ListView)findViewById(R.id.lv);
@@ -51,12 +55,12 @@ public class AllPostActivity extends AppCompatActivity {
      lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
         @Override
         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-            Post p = posts.get(position);
-            DatabaseReference current = FirebaseDatabase.getInstance().getReference("Post/" + p.key);
+   /*        Post p = posts.get(position);
+             DatabaseReference current = FirebaseDatabase.getInstance().getReference("Post/" + p.key);
             current.removeValue();
             Toast.makeText(AllPostActivity.this, "Successfully deleted ", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
-            startActivity(intent);
+            startActivity(intent);*/
             return true;
 
 
@@ -70,6 +74,7 @@ public class AllPostActivity extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
 
                 posts = new ArrayList<Post>();
                 for(DataSnapshot data : dataSnapshot.getChildren())

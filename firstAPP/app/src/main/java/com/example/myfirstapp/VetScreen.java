@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class VetScreen extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnFell,btnLogout;
+    Button btnFell,btnLogout,btnWaiting;
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,10 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
 
         btnFell=(Button)findViewById(R.id.btnSick);
         btnLogout=(Button)findViewById(R.id.btnLogOutVet);
-
+        btnWaiting=(Button)findViewById(R.id.btnWaiting);
         btnFell.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
+        btnWaiting.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +38,11 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         {
             firebaseAuth.signOut();
             Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        if(btnWaiting==v)
+        {
+            Intent intent = new Intent(this, AllPostActivity.class);
             startActivity(intent);
         }
     }
