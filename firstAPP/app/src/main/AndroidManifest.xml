@@ -9,6 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
+
+        <activity
+            android:name=".UserPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notFeelingWell"
+            android:exported="false" />
         <activity
             android:name=".FAQUser"
             android:exported="false" />
