@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +25,6 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
 
     String key;
     Post p;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,14 +70,23 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
     }
     @Override
     public void onClick(View v) {
-        postRef = database.getReference("Post/" + p.key);
 
-        p.uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        p.title = etTitle.getText().toString();
-        p.body = etBody.getText().toString();
-        postRef.setValue(p);
+        if(etTitle.getText().toString().length()>0&&
+                etBody.getText().toString().length()>0)
+        {
+            postRef = database.getReference("Post/" + p.key);
+            p.uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            p.title = etTitle.getText().toString();
+            p.body = etBody.getText().toString();
+            postRef.setValue(p);
 
-        finish();
+
+            finish();
+        }
+        else
+            Toast.makeText(this, "please fill all fields", Toast.LENGTH_LONG).show();
+
+
 
 
 
