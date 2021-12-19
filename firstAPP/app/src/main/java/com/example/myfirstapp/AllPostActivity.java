@@ -63,8 +63,6 @@ public class AllPostActivity extends AppCompatActivity {
             Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
             startActivity(intent);*/
             Post p = posts.get(position);
-            p.setIsDone(true);
-            p.isDone=true;
             ImageView iv=view.findViewById(R.id.ivMission);
             iv.setImageResource(R.drawable.v);
             Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
