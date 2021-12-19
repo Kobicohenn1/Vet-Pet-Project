@@ -35,9 +35,10 @@ public class AllPostAdapter extends ArrayAdapter<Post> {
         View view = layoutInflater.inflate(R.layout.custom_post, parent, false);
 
         TextView tvTitle = (TextView) view.findViewById(R.id.tvTitle);
-        ImageView iv=(ImageView)view.findViewById(R.id.ivMission);
+        //ImageView iv=(ImageView)view.findViewById(R.id.ivMission);
         Post temp = objects.get(position);
         tvTitle.setText(temp.title);
+/*
 
         if(temp.isDone)
         {
@@ -47,6 +48,7 @@ public class AllPostAdapter extends ArrayAdapter<Post> {
         {
             iv.setImageResource(R.drawable.x);
         }
+*/
 
         return view;
     }
