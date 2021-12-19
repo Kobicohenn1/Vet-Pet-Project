@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -61,6 +62,13 @@ public class AllPostActivity extends AppCompatActivity {
             Toast.makeText(AllPostActivity.this, "Successfully deleted ", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
             startActivity(intent);*/
+            Post p = posts.get(position);
+            p.setIsDone(true);
+            p.isDone=true;
+            ImageView iv=view.findViewById(R.id.ivMission);
+            iv.setImageResource(R.drawable.v);
+            Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
+            startActivity(intent);
             return true;
 
 
@@ -81,7 +89,6 @@ public class AllPostActivity extends AppCompatActivity {
                 {
                     Post p = data.getValue(Post.class);
                     posts.add(p);
-
                 }
                 allPostAdapter = new AllPostAdapter(AllPostActivity.this,0,0,posts);
                 lv.setAdapter(allPostAdapter);

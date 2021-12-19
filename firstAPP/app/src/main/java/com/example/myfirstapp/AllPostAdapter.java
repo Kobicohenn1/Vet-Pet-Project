@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class AllPostAdapter extends ArrayAdapter<Post> {
     }
 
 
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -33,9 +35,18 @@ public class AllPostAdapter extends ArrayAdapter<Post> {
         View view = layoutInflater.inflate(R.layout.custom_post, parent, false);
 
         TextView tvTitle = (TextView) view.findViewById(R.id.tvTitle);
+        ImageView iv=(ImageView)view.findViewById(R.id.ivMission);
         Post temp = objects.get(position);
         tvTitle.setText(temp.title);
 
+        if(temp.isDone)
+        {
+            iv.setImageResource(R.drawable.v);
+        }
+        else
+        {
+            iv.setImageResource(R.drawable.x);
+        }
 
         return view;
     }
