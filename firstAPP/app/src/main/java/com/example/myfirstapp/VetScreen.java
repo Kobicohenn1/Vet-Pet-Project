@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class VetScreen extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnFell,btnLogout,btnWaiting;
+    Button btnFell,btnLogout,btnWaiting,btnContact;
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         btnFell=(Button)findViewById(R.id.btnSick);
         btnLogout=(Button)findViewById(R.id.btnLogOutVet);
         btnWaiting=(Button)findViewById(R.id.btnWaiting);
+        btnContact = (Button)findViewById(R.id.btnContact);
+        btnContact.setOnClickListener(this);
         btnFell.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
         btnWaiting.setOnClickListener(this);
@@ -43,6 +46,11 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         if(btnWaiting==v)
         {
             Intent intent = new Intent(this, AllPostActivity.class);
+            startActivity(intent);
+        }
+        if (v == btnContact)
+        {
+            Intent intent = new Intent(this, Contact_us.class);
             startActivity(intent);
         }
     }

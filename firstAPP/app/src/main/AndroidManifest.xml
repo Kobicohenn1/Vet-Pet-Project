@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
-
+        <activity
+            android:name=".Contact_us"
+            android:exported="false" />
         <activity
             android:name=".UserPostActivity"
             android:exported="false" />
