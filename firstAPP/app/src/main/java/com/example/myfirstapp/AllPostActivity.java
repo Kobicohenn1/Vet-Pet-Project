@@ -56,17 +56,13 @@ public class AllPostActivity extends AppCompatActivity {
      lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
         @Override
         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-   /*        Post p = posts.get(position);
+          Post p = posts.get(position);
              DatabaseReference current = FirebaseDatabase.getInstance().getReference("Post/" + p.key);
             current.removeValue();
             Toast.makeText(AllPostActivity.this, "Successfully deleted ", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
-            startActivity(intent);*/
-            Post p = posts.get(position);
-            ImageView iv=view.findViewById(R.id.ivMission);
-            iv.setImageResource(R.drawable.v);
-            Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
             startActivity(intent);
+
             return true;
 
 

@@ -19,7 +19,8 @@ public class AllPostAdapter extends ArrayAdapter<Post> {
     Context context;
     List<Post> objects;
 
-    public AllPostAdapter(Context context, int resource, int textViewResourceId, List<Post> objects) {
+    public AllPostAdapter(Context context, int resource, int textViewResourceId, List<Post> objects
+    ) {
         super(context, resource, textViewResourceId, objects);
 
         this.context = context;
@@ -35,23 +36,13 @@ public class AllPostAdapter extends ArrayAdapter<Post> {
         View view = layoutInflater.inflate(R.layout.custom_post, parent, false);
 
         TextView tvTitle = (TextView) view.findViewById(R.id.tvTitle);
-        //ImageView iv=(ImageView)view.findViewById(R.id.ivMission);
+        ImageView iv=(ImageView)view.findViewById(R.id.ivMission);
         Post temp = objects.get(position);
         tvTitle.setText(temp.title);
-/*
-
-        if(temp.isDone)
-        {
+        if(temp.flg) {
             iv.setImageResource(R.drawable.v);
         }
-        else
-        {
-            iv.setImageResource(R.drawable.x);
-        }
-*/
-
         return view;
     }
-
 
 }

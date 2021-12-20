@@ -34,6 +34,7 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
         etTitle = (EditText) findViewById(R.id.etTitle);
         etBody = (EditText) findViewById(R.id.etBody);
         btnSave = (Button) findViewById(R.id.btnSave);
+
         btnSave.setOnClickListener(this);
         Intent intent = getIntent();
 
@@ -78,6 +79,7 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
             p.uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             p.title = etTitle.getText().toString();
             p.body = etBody.getText().toString();
+            p.flg=true;
             postRef.setValue(p);
 
 

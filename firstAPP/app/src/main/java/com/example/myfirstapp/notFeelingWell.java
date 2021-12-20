@@ -51,7 +51,7 @@ public class notFeelingWell extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         if (btnSave == v) {
             String uid=FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
-            Post p=new Post(uid,etTitle.getText().toString(),etBody.getText().toString(),"");
+            Post p=new Post(uid,etTitle.getText().toString(),etBody.getText().toString(),"",false);
             postRef=firebaseDatabase.getReference("Post").push();
             p.key=postRef.getKey();
             postRef.setValue(p);
