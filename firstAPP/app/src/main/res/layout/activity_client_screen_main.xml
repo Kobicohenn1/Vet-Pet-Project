@@ -82,6 +82,7 @@
             android:backgroundTint="#A61717"
             android:text="Log Out"
             android:textSize="15dp"
-                />
+            />
+
 
 </LinearLayout>
