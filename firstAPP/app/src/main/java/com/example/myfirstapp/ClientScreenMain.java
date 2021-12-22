@@ -88,6 +88,9 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         {
             startActivity(new Intent(this,FAQUser.class));
         }
+        if(btnInfo == v){
+            startActivity(new Intent(this,Information.class));
+        }
         if (logout==v) {
             firebaseAuth.signOut();
             startActivity(new Intent(this, MainActivity.class));

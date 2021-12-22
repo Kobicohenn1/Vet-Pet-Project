@@ -64,6 +64,16 @@
             android:background="@android:color/black"/>
 
         <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="INFORMATION"
+            android:background="@android:color/black"
+            android:id="@+id/btn_Info"
+            />
+
+        <Button
             android:id="@+id/btnLogOutClient"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
