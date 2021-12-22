@@ -27,7 +27,7 @@ public class Contact_us extends AppCompatActivity {
             public void onClick(View v) {
                 String subject = et_subject.getText().toString().trim();
                 String message = et_message.getText().toString().trim();
-                String email = "contact@VetPet.com";
+                String email = "vetpetmanager@gmail.com";
 
                 if (subject.isEmpty())
                 {

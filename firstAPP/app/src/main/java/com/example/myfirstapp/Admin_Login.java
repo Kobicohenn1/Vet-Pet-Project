@@ -103,7 +103,7 @@ public class Admin_Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful() && emaiL.equals("vetpetmanager@gmail.com") && password.equals("vet123456")) {
-                            startActivity(new Intent(context, VetScreen.class));
+                            startActivity(new Intent(context, adminScreen.class));
                         } else {
                             Toast.makeText(context, "faild to login!", duration).show();
                         }
