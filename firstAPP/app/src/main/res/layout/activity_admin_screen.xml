@@ -117,6 +117,17 @@
         android:id="@+id/btnAddP"
         android:textSize="15sp"
         />
+
+    <Button
+        android:text="שלח התראה"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:backgroundTint="#5A5656"
+        android:id="@+id/btnPush"
+        android:textSize="15sp"
+        />
+
     <Button
         android:id="@+id/btnLogOutAdmin"
         android:layout_marginTop="10dp"
@@ -126,6 +137,7 @@
         android:backgroundTint="#A61717"
         android:text="Log Out"
         android:textSize="15dp" />
+
 
 
 </LinearLayout>

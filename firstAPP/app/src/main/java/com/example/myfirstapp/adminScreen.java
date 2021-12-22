@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class adminScreen extends AppCompatActivity implements View.OnClickListener {
-    Button btnLogout;
+    Button btnLogout,btnPushNot;
     private FirebaseAuth mAuth;
 
     @Override
@@ -20,6 +20,8 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         mAuth = FirebaseAuth.getInstance();
 
         btnLogout=(Button) findViewById(R.id.btnLogOutAdmin);
+        btnPushNot = (Button)findViewById(R.id.btnPush);
+        btnPushNot.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
 
 
@@ -31,6 +33,11 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         {
             mAuth.signOut();
             Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        if (v == btnPushNot)
+        {
+            Intent intent = new Intent(this, PushNotifications.class);
             startActivity(intent);
         }
     }
