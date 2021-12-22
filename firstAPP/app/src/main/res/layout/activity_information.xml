@@ -5,83 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ClientScreenMain">
-
+    tools:context=".Information">
 
     <TextView
-        android:id="@+id/welcomeClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="           Vet Pet    -    מידע"
+        android:textColor="#38AA3D"
+        android:textSize="30sp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="6dp"
-        android:text="Welcome: "
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_gravity="right"
+        android:text="מידע לשימוש האפליקציה :"
+        android:textColor="#000000"
+        android:textSize="17sp" />
 
-    <Button
-        android:id="@+id/btn_Add"
-        android:layout_marginTop="10dp"
-        android:layout_width="240dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:text="Add your animal"
-        android:background="@android:color/black"/>
-    <Button
-        android:id="@+id/btn_Health"
-        android:layout_marginTop="10dp"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:text="Health Life Tips"
-        android:background="@android:color/black"/>
-    <Button
-        android:id="@+id/btn_FAQ"
-        android:layout_marginTop="10dp"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:text="FAQ"
-        android:background="@android:color/black"/>
+        android:layout_gravity="right"
 
-    <Button
-        android:id="@+id/btn_NFWell"
-        android:layout_marginTop="10dp"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:text="Not Felling Well"
-        android:background="@android:color/black"/>
-
-    <Button
-        android:id="@+id/btn_NFWellAnswer"
-        android:layout_marginTop="10dp"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:text="Answer"
-        android:background="@android:color/black"/>
-
-    <Button
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
-        android:text="INFORMATION"
-        android:background="@android:color/black"
-        android:id="@+id/btn_Info"
+        android:text="אפליקצית Vet Pet נועדה לתת מענה מהיר ואמין ללקוחותינו , על מנת לתת את השירות הטוב ביותר לפניכם המידע הנחוץ לשם תפעול האפליקצייה:"
         />
 
-    <Button
-        android:id="@+id/btnLogOutClient"
-        android:layout_marginTop="10dp"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="#A61717"
-        android:text="Log Out"
-        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right"
+        android:text="הוספת חיה:"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="כלקוח תוכל להוסיף את החיה שלך לפורפיל , כך יתאפשר להפנות את המידע שלו לווטרינר באופן קל יותר והטיפול יתבצע במהירות וביעילות."
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right"
+        android:text="טיפים לאורח חיים בריא:"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="בעמוד זה תוכל להתעדכן בעיצות הכי רלוונטיות היום בגידול בעל החיים שלך, כך תוכל להעניק לבעל החיים שלך את איכות החיים הטובה ביותר. "
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:text="שאלות ותשובות:"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="דף זה יעניק  ללקוח תשובות מהירות לשאלות נפוצות , בזכות מידע יוכלו הבעלים לקבל החלטות שיטיבו עם בעל החיים שלהם בביטחון מלא."
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:text="לא חש בטוב:"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="במידה ויש חשש לסכנה ממשית לבעל החיים, לחיצה על כפתור לא חש בטוב תאפשר ללקוח גישה מהירה ולווטרינר , הלקוח יכול לפרט על הבעיה ולהעביר אותה לווטרינר כך שיינתן מענה כמה שיותר מהיר בעת צמב חירום."
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="לאחר רישום הבעיה המענה יינתן בהקדם האפשרי ויהיה ניתן לצפות בו בכפתור ה'מענה'."
         />
 
 

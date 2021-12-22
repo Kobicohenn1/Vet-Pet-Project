@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ClientScreenMain extends AppCompatActivity implements View.OnClickListener {
     private TextView welcome;
-    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell;
+    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell,btnInfo;
     private Button logout;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -40,6 +40,7 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnFaq=(Button)findViewById(R.id.btn_FAQ) ;
         btnnfw=(Button)findViewById(R.id.btn_NFWell) ;
         btnAnsFell=(Button)findViewById(R.id.btn_NFWellAnswer) ;
+        btnInfo=(Button)findViewById(R.id.btn_Info);
         firebaseAuth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();// this user
 
