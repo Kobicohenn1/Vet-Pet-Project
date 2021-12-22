@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity{
     Button RegAsClient;
     Button ClickLogIn;
     Button ClickLogInVet;
+    Button ClickLogInAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity{
         RegAsClient = (Button)findViewById(R.id.btn_registerClient);
         ClickLogIn = (Button) findViewById(R.id.btn_login);
         ClickLogInVet = (Button) findViewById(R.id.btn_loginVET);
+        ClickLogInAdmin = (Button)findViewById(R.id.btn_loginAdmin);
 
         RegAsClient.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,12 @@ public class MainActivity extends AppCompatActivity{
                 OpenRegVetActivityVet();
             }
         });
+        ClickLogInAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               OpenLogInAdminActivity();
+            }
+        });
     }
 
     public void OpenRegClientActivity(){
@@ -69,5 +77,11 @@ public class MainActivity extends AppCompatActivity{
     public void OpenRegVetActivityVet(){
         Intent intentLoginVet = new Intent(this,LoginActivityVet.class);
         startActivity(intentLoginVet);
+    }
+
+    public void OpenLogInAdminActivity()
+    {
+        Intent intentLoginAdmin = new Intent(this,Admin_Login.class);
+        startActivity(intentLoginAdmin);
     }
 }
