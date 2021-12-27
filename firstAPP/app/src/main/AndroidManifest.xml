@@ -21,6 +21,9 @@
             android:name=".VetEditFAQ"
             android:exported="false" />
         <activity
+            android:name=".RetreiveDataActivity"
+            android:exported="false" />
+        <activity
             android:name=".Information"
             android:exported="false" />
         <activity
