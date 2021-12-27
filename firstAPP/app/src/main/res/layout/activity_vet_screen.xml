@@ -47,7 +47,7 @@
         android:layout_gravity="right"
         android:backgroundTint="#5A5656"
         android:textColor="@color/white"
-        android:id="@+id/btnQA"
+        android:id="@+id/EditBtnQA"
         android:textSize="15sp"
         />
 

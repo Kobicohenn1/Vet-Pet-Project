@@ -35,7 +35,7 @@ public class Contact_us extends AppCompatActivity {
                 }
                 else if (message.isEmpty())
                 {
-                    Toast.makeText(Contact_us.this, "Please add some Message", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Contact_us.this, "Please add Message", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {

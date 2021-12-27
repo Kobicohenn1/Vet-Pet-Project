@@ -42,15 +42,11 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
         postRef = database.getReference("Post/" + key);
         this.retrieveData();
 
-
-
     }
 
 
     public void retrieveData()
     {
-
-
         postRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -66,8 +62,6 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
 
             }
         });
-
-
     }
     @Override
     public void onClick(View v) {
@@ -87,10 +81,6 @@ public class EditPostActivity extends AppCompatActivity implements View.OnClickL
         }
         else
             Toast.makeText(this, "please fill all fields", Toast.LENGTH_LONG).show();
-
-
-
-
 
     }
 }

@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class VetScreen extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnFell,btnLogout,btnWaiting,btnContact;
+    Button btnFell,btnLogout,btnWaiting,btnContact,btnEditQA;
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,12 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         btnLogout=(Button)findViewById(R.id.btnLogOutVet);
         btnWaiting=(Button)findViewById(R.id.btnWaiting);
         btnContact = (Button)findViewById(R.id.btnContact);
+        btnEditQA = (Button)findViewById(R.id.EditBtnQA);
         btnContact.setOnClickListener(this);
         btnFell.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
         btnWaiting.setOnClickListener(this);
+        btnEditQA.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +54,9 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         {
             Intent intent = new Intent(this, Contact_us.class);
             startActivity(intent);
+        }
+        if (v == btnEditQA) {
+            startActivity(new Intent(this,VetEditFAQ.class));
         }
     }
 }

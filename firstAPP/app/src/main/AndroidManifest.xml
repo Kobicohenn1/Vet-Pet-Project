@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".VetEditFAQnext"
+            android:exported="false" />
+        <activity
+            android:name=".VetEditFAQ"
+            android:exported="false" />
+        <activity
             android:name=".Information"
             android:exported="false" />
         <activity
