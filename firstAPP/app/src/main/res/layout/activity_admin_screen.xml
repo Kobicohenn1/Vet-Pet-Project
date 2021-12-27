@@ -66,7 +66,7 @@
         android:layout_height="50dp"
         android:layout_gravity="right"
         android:backgroundTint="#5A5656"
-        android:id="@+id/btnVetProfil"
+        android:id="@+id/btnVetProfile"
         android:textSize="15sp"
         />
 
