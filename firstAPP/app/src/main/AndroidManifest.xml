@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".HealthLifeTipsEdit"
+            android:exported="false" />
+        <activity
             android:name=".adminScreen"
             android:exported="false" />
         <activity
