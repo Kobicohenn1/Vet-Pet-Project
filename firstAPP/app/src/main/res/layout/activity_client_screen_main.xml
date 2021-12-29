@@ -72,6 +72,15 @@
             android:background="@android:color/black"
             android:id="@+id/btn_Info"
             />
+        <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Vet List"
+            android:background="@android:color/black"
+            android:id="@+id/btn_VetList"
+            />
 
         <Button
             android:id="@+id/btnLogOutClient"

@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ClientScreenMain extends AppCompatActivity implements View.OnClickListener {
     private TextView welcome;
-    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell , btnInfo;
+    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell , btnInfo,btnVetList;
     private Button logout;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -41,6 +41,7 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnnfw=(Button)findViewById(R.id.btn_NFWell) ;
         btnAnsFell=(Button)findViewById(R.id.btn_NFWellAnswer) ;
         btnInfo=(Button)findViewById(R.id.btn_Info);
+        btnVetList = (Button)findViewById(R.id.btn_VetList);
         firebaseAuth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();// this user
 
@@ -51,6 +52,7 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnnfw.setOnClickListener(this);
         btnAnsFell.setOnClickListener(this);
         btnInfo.setOnClickListener(this);
+        btnVetList.setOnClickListener(this);
         reference= FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -96,6 +98,10 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         if (logout==v) {
             firebaseAuth.signOut();
             startActivity(new Intent(this, MainActivity.class));
+        }
+        if(btnVetList == v)
+        {
+            startActivity(new Intent(this,VetData_User.class));
         }
     }
 }
