@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class adminScreen extends AppCompatActivity implements View.OnClickListener {
-    Button btnLogout,btnPushNot,btnVetList;
+    Button btnLogout,btnPushNot,btnVetList ,btnEditQAadmin;
     private FirebaseAuth mAuth;
 
     @Override
@@ -22,9 +22,11 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         btnVetList = (Button)findViewById(R.id.btnVets);
         btnLogout=(Button) findViewById(R.id.btnLogOutAdmin);
         btnPushNot = (Button)findViewById(R.id.btnPush);
+        btnEditQAadmin = (Button)findViewById(R.id.btnEditQAadmin);
         btnPushNot.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
         btnVetList.setOnClickListener(this);
+        btnEditQAadmin.setOnClickListener(this);
 
 
     }
@@ -45,6 +47,10 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         if (v == btnVetList)
         {
             Intent intent = new Intent(this, RetreiveDataActivity.class);
+            startActivity(intent);
+        }
+        if(v == btnEditQAadmin){
+            Intent intent = new Intent(this , AdminEditFAQ.class);
             startActivity(intent);
         }
     }

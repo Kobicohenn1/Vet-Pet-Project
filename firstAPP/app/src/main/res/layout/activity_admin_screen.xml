@@ -76,7 +76,7 @@
         android:layout_height="50dp"
         android:layout_gravity="right"
         android:backgroundTint="#5A5656"
-        android:id="@+id/btnContact"
+        android:id="@+id/btnEditQAadmin"
         android:textSize="15sp"
         />
 
@@ -86,7 +86,7 @@
         android:layout_height="50dp"
         android:layout_gravity="right"
         android:backgroundTint="#5A5656"
-        android:id="@+id/btnHealth"
+        android:id="@+id/btnHealthEdit"
         android:textSize="15sp"
         />
     <Button
