@@ -64,7 +64,7 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         }
 
         if (v == btnHealth) {
-            Intent intent = new Intent(this, HealthLifeTipsEdit.class);
+            Intent intent = new Intent(this, HealthLifeEditManager.class);
             startActivity(intent);
         }
 

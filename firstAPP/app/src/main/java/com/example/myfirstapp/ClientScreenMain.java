@@ -86,7 +86,7 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         }
         if(btnLife==v)
         {
-            startActivity(new Intent(this,HealthLifeTips.class));
+            startActivity(new Intent(this,AllHealthLifeTips.class));
         }
         if(btnFaq==v)
         {

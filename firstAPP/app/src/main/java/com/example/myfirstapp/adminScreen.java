@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class adminScreen extends AppCompatActivity implements View.OnClickListener {
-    Button btnLogout,btnPushNot,btnVetList ,btnEditQAadmin,btnUsersList;
+    Button btnLogout,btnPushNot,btnVetList ,btnEditQAadmin,btnUsersList,btnHealthEdit;
     private FirebaseAuth mAuth;
 
     @Override
@@ -24,6 +24,8 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         btnPushNot = (Button)findViewById(R.id.btnPush);
         btnEditQAadmin = (Button)findViewById(R.id.btnEditQAadmin);
         btnUsersList = (Button)findViewById(R.id.btnUsers);
+        btnHealthEdit = (Button)findViewById(R.id.btnHealthEdit);
+        btnHealthEdit.setOnClickListener(this);
         btnUsersList.setOnClickListener(this);
         btnPushNot.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
@@ -58,6 +60,10 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         if(v == btnUsersList)
         {
             Intent intent = new Intent(this , UserList.class);
+            startActivity(intent);
+        }
+        if (v == btnHealthEdit){
+            Intent intent = new Intent(this , HealthLifeEditManager.class);
             startActivity(intent);
         }
     }
