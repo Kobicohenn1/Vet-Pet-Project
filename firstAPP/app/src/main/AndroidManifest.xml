@@ -15,6 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".EditHealthLifeTips"
+            android:exported="false" />
+        <activity
+            android:name=".AllHealthLifeTips"
+            android:exported="false" />
+        <activity
+            android:name=".postManagerTips"
+            android:exported="false" />
+        <activity
+            android:name=".HealthLifeEditManager"
+            android:exported="false" />
+        <activity
             android:name=".HealthLifeTipsEdit"
             android:exported="false" />
         <activity

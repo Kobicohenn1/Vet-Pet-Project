@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:textSize="10sp"
             android:layout_gravity="center"
+            android:id="@+id/dogWalk"
             android:text="בין אם לוח הזמנים שלכם מאפשר את זה מדי יום או רק פעם או פעמיים בשבוע, הליכה עם הכלב שלכם יכולה לספק מספר יתרונות עבור שניכם.
     מלבד גורם הפעילות הפיזית הברור, זה יכול לחזק את הקשר בין חיית המחמד / הבעלים, וכתוצאה מכך להפוך את הכלב שלכם למאושר יותר.
     הליכה עם הכלב שלכם באופן קבוע יכולה גם למנוע כל התנהגות הרסנית הנובעת משעמום כאשר הוא לבד בבית.
@@ -56,6 +57,7 @@
             android:layout_height="wrap_content"
             android:textSize="10sp"
             android:layout_gravity="center"
+            android:id="@+id/catSleep"
             android:text="חתולים הם סקרנים מטבעם ורבים מהם אוהבים לצפות בציפורים, בחתולים אחרים ובעוד התרחשויות אותן הם יכולים לראות דרך החלון.
     גם אם זה סתם לבהות דרכו. אתה יכול להרוות את הסקרנות של חיית המחמד שלכם ולשמור אותם עסוקים, על ידי התקנת משטח רביצה ליד החלון.
     רק היו בטוחים כי החלון והמשטח מאובטחים, כדי למנוע פגיעה."
@@ -64,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="תנו לחתול שלכם משטח רביצה ליד החלון"
+            android:text="טפחו את חיית המחמד שלכם"
             android:layout_marginTop="20dp"
             android:textSize="14sp"
             android:textColor="#000000"
@@ -74,6 +76,7 @@
             android:layout_height="wrap_content"
             android:textSize="10sp"
             android:layout_gravity="center"
+            android:id="@+id/beautyPat"
             android:text="טיפול בחיות הוא גם דאגה לטיפוחן. טיפוח חיות המחמד שלכם לא רק ששומר על העור והפרווה שלהם בריאים, אלא גם הוא יכול לחזק את הקשר שבין חיית המחמד לבעלים.
     למעשה, חיות מחמד רבות נהנות להיות מטופחות. הטיפוח יכול גם להפחית נשירה, אם הוא נעשה באופן קבוע.
     אם חיית המחמד שלכם זקוקה לטיפוח מקצועי יותר, קבעו תור אצל ספר מקצועי, מרפאה וטרינרית, או בכל מקום אחר בו מספקים שירותי מספרה וטיפוח"
