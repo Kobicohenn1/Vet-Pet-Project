@@ -9,4 +9,19 @@ public class User
         this.email=email;
         this.phone=phone;
     }
+    public User (){
+
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 }

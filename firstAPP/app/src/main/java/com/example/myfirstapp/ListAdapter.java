@@ -37,8 +37,8 @@ public class ListAdapter extends ArrayAdapter {
 
         Vet vet = VetList.get(position);
 
-        tvName.setText(vet.getFullname() + "  -  ");
-        tvEmail.setText(vet.getEmail());
+        tvName.setText("Name - " + vet.getFullname());
+        tvEmail.setText("Email - " +vet.getEmail());
 
         return listItemView;
     }

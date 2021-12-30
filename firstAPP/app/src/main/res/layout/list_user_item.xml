@@ -5,21 +5,24 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvEmail"
+        android:id="@+id/tvUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tvUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="full_name"
         android:textSize="18sp"/>
 
-
-
-
+    <TextView
+        android:id="@+id/tvUserPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone number"
+        android:textSize="18sp"/>
 
 </LinearLayout>

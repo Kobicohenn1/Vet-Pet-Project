@@ -100,15 +100,6 @@
         />
 
     <Button
-        android:text="שלח התראה"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="right"
-        android:backgroundTint="#5A5656"
-        android:id="@+id/btnNotfication"
-        android:textSize="15sp"
-        />
-    <Button
         android:text="הוספת פרסומת"
         android:layout_width="240dp"
         android:layout_height="50dp"
