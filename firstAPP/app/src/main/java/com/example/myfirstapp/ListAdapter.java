@@ -34,11 +34,16 @@ public class ListAdapter extends ArrayAdapter {
 
         TextView tvName = listItemView.findViewById(R.id.tvName);
         TextView tvEmail = listItemView.findViewById(R.id.tvEmail);
+        TextView tvClinic = listItemView.findViewById(R.id.tvClinicLocation);
+        TextView tvSeniorYears = listItemView.findViewById(R.id.tvSeniorYears);
+
 
         Vet vet = VetList.get(position);
 
         tvName.setText("Name - " + vet.getFullname());
         tvEmail.setText("Email - " +vet.getEmail());
+        tvClinic.setText("Clinic Location - " +vet.getCliniclocation());
+        tvSeniorYears.setText("Senior Years - "+vet.getSenioryears());
 
         return listItemView;
     }

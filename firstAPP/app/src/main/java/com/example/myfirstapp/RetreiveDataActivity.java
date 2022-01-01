@@ -66,6 +66,8 @@ public class RetreiveDataActivity extends AppCompatActivity {
                 Vet vet = vetList.get(position);
                 showUpdateDialog(vet.getFullname());
                 showUpdateDialog(vet.getEmail());
+                showUpdateDialog(vet.getCliniclocation());
+                showUpdateDialog(vet.getSenioryears());
                 return false;
             }
         });
@@ -79,6 +81,8 @@ public class RetreiveDataActivity extends AppCompatActivity {
         mDialog.setView(mDialogView);
         EditText etUpdatefullname = mDialogView.findViewById(R.id.etUpdatefullname);
         EditText etUpdateEmail = mDialogView.findViewById(R.id.etUpdateEmail);
+        EditText etUpdateClincLocation = mDialogView.findViewById(R.id.etUpdateClinic);
+        EditText etUpdateSeniorYears = mDialogView.findViewById(R.id.etUpdateSenior);
         Button btnUpdate = mDialogView.findViewById(R.id.btnUpdate);
 
         mDialog.setTitle("Updating" + name + "record");
@@ -92,8 +96,9 @@ public class RetreiveDataActivity extends AppCompatActivity {
 
                 String newName =etUpdatefullname.getText().toString();
                 String newEmail =etUpdateEmail.getText().toString();
-
-                updateData(newName,newEmail);
+                String newClinic = etUpdateClincLocation.getText().toString();
+                String newSenior = etUpdateSeniorYears.getText().toString();
+                updateData(newName,newEmail,newClinic,newSenior);
                 Toast.makeText(RetreiveDataActivity.this, "", Toast.LENGTH_SHORT).show();
 
             }
@@ -102,10 +107,10 @@ public class RetreiveDataActivity extends AppCompatActivity {
 
 
     }
-    private void updateData(String name,String email){
+    private void updateData(String name,String email,String clinic,String senior){
         //create database ref
         DatabaseReference DbRef = FirebaseDatabase.getInstance().getReference("Vet").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        Vet vet = new Vet(name,email);
+        Vet vet = new Vet(name,email,clinic,senior);
         DbRef.setValue(vet);
 
 

@@ -36,7 +36,7 @@ public class RegVetActivity extends AppCompatActivity implements View.OnClickLis
     // One Preview Image
     ImageView IVPreviewImage;
 
-    private EditText pass1,pass2,email,phone,address,fullName;
+    private EditText pass1,pass2,email,phone,clinic_location,senior_years,fullName;
     private Button btnSave,btnDip;
 
     @Override
@@ -59,7 +59,8 @@ public class RegVetActivity extends AppCompatActivity implements View.OnClickLis
 
         phone=(EditText)findViewById(R.id.editPhoneNumVetReg);
 
-        address=(EditText)findViewById(R.id.editAddressVetReg);
+        clinic_location=(EditText)findViewById(R.id.editAddressVetReg);
+        senior_years = (EditText)findViewById(R.id.editSeniorYears);
 
         btnSave = (Button)findViewById(R.id.btnSUVet);
         btnSave.setOnClickListener(this);
@@ -133,13 +134,13 @@ public class RegVetActivity extends AppCompatActivity implements View.OnClickLis
         String p2=pass2.getText().toString().trim();
 
         String pNum=phone.getText().toString().trim();
-
-        String ads=address.getText().toString().trim();
+        String seniorStringYears = senior_years.getText().toString().trim();
+        String ads=clinic_location.getText().toString().trim();
 
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
 
-        if(name.isEmpty()||p1.isEmpty()||p2.isEmpty()||pNum.isEmpty()||ads.isEmpty()||mail.isEmpty())
+        if(name.isEmpty()||p1.isEmpty()||p2.isEmpty()||pNum.isEmpty()||ads.isEmpty()||mail.isEmpty()||seniorStringYears.isEmpty())
         {
             CharSequence text ="All fields are required";
             Toast toast = Toast.makeText(context,text,duration);
@@ -182,7 +183,7 @@ public class RegVetActivity extends AppCompatActivity implements View.OnClickLis
                 CharSequence textE = "Please wait for approve";
                 if(task.isSuccessful())
                 {
-                    Vet vet=new Vet(name,mail);
+                    Vet vet=new Vet(name,mail,ads,seniorStringYears);
                     FirebaseDatabase.getInstance().getReference("Vet")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(vet).addOnCompleteListener(new OnCompleteListener<Void>() {
