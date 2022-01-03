@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddPirsomet">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/logo"
+        android:paddingVertical="100dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:layout_marginTop="30sp"
+        android:text="VetPet App ID for Google Ads :"
+        android:layout_gravity="left"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="140dp"
+        android:textSize="17dp"
+        android:layout_height="wrap_content"
+        android:text="ca-app-pub-3183062838414181~8371106194"
+    />
+
+
+</LinearLayout>
+
+
+
