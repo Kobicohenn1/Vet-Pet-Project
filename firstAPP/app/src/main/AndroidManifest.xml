@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myfirstapp">
+    package="com.example.myfirstapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,18 +24,24 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3183062838414181~8371106194" />
 
+        android:theme="@style/Theme.MyFirstApp">
+        <activity
+            android:name=".VetEditProfile"
+            android:exported="false" />
         <activity
             android:name=".EditHealthLifeTips"
             android:exported="false" />
         <activity
             android:name=".postManagerTips"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".HealthLifeEditManager"
             android:exported="false" />
         <activity
             android:name=".AllHealthLifeTipsAdapter"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".AllHealthLifeTips"
             android:exported="false" />
@@ -115,7 +122,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -127,7 +134,7 @@
             android:name=".FirebaseMessagingService"
             android:exported="true"
             android:permission="TODO"
-            tools:ignore="ExportedService">
+            tools:ignore="ExportedService" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

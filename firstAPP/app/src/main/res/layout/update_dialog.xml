@@ -20,6 +20,20 @@
         android:ems="10"
         android:layout_marginTop="10dp"
         android:hint="New Email" />
+    <EditText
+        android:id="@+id/etUpdateClinic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="New Clinic Location" />
+    <EditText
+        android:id="@+id/etUpdateSenior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="New Seniority years" />
 
     <Button
         android:id="@+id/btnUpdate"

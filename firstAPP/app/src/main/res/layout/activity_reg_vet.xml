@@ -79,6 +79,14 @@
         android:textSize="20sp"
         />
 
+    <EditText
+        android:hint="Seniority years "
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:id="@+id/editSeniorYears"
+        android:textSize="20sp"
+        />
+
     <Button
         android:id="@+id/btnDip"
         android:layout_marginTop="10dp"
