@@ -5,6 +5,7 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -30,22 +31,22 @@ import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class LoginUserTestFaild {
+public class AdminSendNotTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void loginUserTestFaild() {
+    public void adminSendNotTest() {
         try {
-            Thread.sleep(500);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ViewInteraction materialButton = onView(
-                allOf(withId(R.id.btn_loginVET), withText("Login Vet"), isDisplayed()));
+        ViewInteraction materialButton = onView(allOf(withId(R.id.btn_loginAdmin), withText("Login Admin"),  isDisplayed()));
         materialButton.perform(click());
+
 
         try {
             Thread.sleep(700);
@@ -53,20 +54,22 @@ public class LoginUserTestFaild {
             e.printStackTrace();
         }
 
-        ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.et_emailVet),isDisplayed()));
-        appCompatEditText.perform(replaceText("someuser@gmail.com"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText2 = onView(allOf(withId(R.id.et_passwordVet), isDisplayed()));
-        appCompatEditText2.perform(replaceText("12345678"), closeSoftKeyboard());
-
-        ViewInteraction materialButton2 = onView(allOf(withId(R.id.btn_loginVet), withText("Log in"), isDisplayed()));
+        ViewInteraction appCompatEditText = onView(allOf(withId(R.id.et_AdminEmail), isDisplayed()));
+        appCompatEditText.perform(replaceText("vetpetmanager@gmail.com"), closeSoftKeyboard());
+        ViewInteraction appCompatEditText2 = onView(allOf(withId(R.id.et_passwordAdmin), isDisplayed()));
+        appCompatEditText2.perform(replaceText("vet123456"), closeSoftKeyboard());
+        ViewInteraction materialButton2 = onView(allOf(withId(R.id.btn_loginAdmin), withText("Log in"), isDisplayed()));
         materialButton2.perform(click());
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(700);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        ViewInteraction materialButton3 = onView(allOf(withId(R.id.btnPush), withText("Send Notification") ));
+        materialButton3.perform(scrollTo(), click());
     }
+
+
 }

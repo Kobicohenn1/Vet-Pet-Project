@@ -5,46 +5,39 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.is;
-
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
 
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
-import org.hamcrest.TypeSafeMatcher;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class LoginUserTestFaild {
+public class AdminVetListTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void loginUserTestFaild() {
+    public void adminVetListTest() {
+
         try {
-            Thread.sleep(500);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         ViewInteraction materialButton = onView(
-                allOf(withId(R.id.btn_loginVET), withText("Login Vet"), isDisplayed()));
+                allOf(withId(R.id.btn_loginAdmin), withText("Login Admin"), isDisplayed()));
         materialButton.perform(click());
 
         try {
@@ -54,19 +47,35 @@ public class LoginUserTestFaild {
         }
 
         ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.et_emailVet),isDisplayed()));
-        appCompatEditText.perform(replaceText("someuser@gmail.com"), closeSoftKeyboard());
+                allOf(withId(R.id.et_AdminEmail), isDisplayed()));
+        appCompatEditText.perform(replaceText("vetpetmanager@gmail.com"), closeSoftKeyboard());
 
-        ViewInteraction appCompatEditText2 = onView(allOf(withId(R.id.et_passwordVet), isDisplayed()));
-        appCompatEditText2.perform(replaceText("12345678"), closeSoftKeyboard());
+        ViewInteraction appCompatEditText2 = onView(
+                allOf(withId(R.id.et_passwordAdmin), isDisplayed()));
+        appCompatEditText2.perform(replaceText("vet123456"), closeSoftKeyboard());
 
-        ViewInteraction materialButton2 = onView(allOf(withId(R.id.btn_loginVet), withText("Log in"), isDisplayed()));
+        ViewInteraction materialButton2 = onView(
+                allOf(withId(R.id.btn_loginAdmin), withText("Log in"), isDisplayed()));
         materialButton2.perform(click());
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(700);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        ViewInteraction materialButton3 = onView(
+                allOf(withId(R.id.btnVets), withText("Vet list"), isDisplayed()));
+        materialButton3.perform(click());
+
+        try {
+            Thread.sleep(3500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.tvEmail), withText("Email - kfuckh@gmail.com"), isDisplayed()));
+        textView.check(matches(withText("Email - kfuckh@gmail.com")));
     }
 }
