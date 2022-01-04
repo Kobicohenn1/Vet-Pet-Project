@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     startActivity(new Intent(context,ClientScreenMain.class));
                                 } else {
-                                    Toast.makeText(context, "faild to login!", duration).show();
+                                    Toast.makeText(context, "failed to login!", duration).show();
                                 }
                         }
                 });

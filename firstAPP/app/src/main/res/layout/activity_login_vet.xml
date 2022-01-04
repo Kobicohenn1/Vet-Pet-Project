@@ -12,6 +12,7 @@ tools:context=".LoginActivityVet">
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@drawable/logo"
+        android:layout_marginTop="10dp"
         android:paddingVertical="100dp" />
 
     <TextView
@@ -52,7 +53,6 @@ tools:context=".LoginActivityVet">
             android:layout_gravity="left"
             android:layout_marginRight="5dp"
             android:text="Log in"
-            android:background="@android:color/black"
             android:layout_alignParentBottom="true"/>
 
         <Button

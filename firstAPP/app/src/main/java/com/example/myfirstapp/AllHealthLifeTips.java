@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,10 +49,30 @@ public class AllHealthLifeTips extends AppCompatActivity {
                 postManagerTips p = posts.get(position);
                 DatabaseReference current = FirebaseDatabase.getInstance().getReference("HealthLife/" + p.key);
                 current.removeValue();
+                Toast.makeText(AllHealthLifeTips.this, "Successfully deleted ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AllHealthLifeTips.this, HealthLifeEditManager.class);
+                startActivity(intent);
                 return true;
             }
         });
     }
+
+    //lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+    //        @Override
+    //        public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+    //          Post p = posts.get(position);
+    //             DatabaseReference current = FirebaseDatabase.getInstance().getReference("Post/" + p.key);
+    //            current.removeValue();
+    //            Toast.makeText(AllPostActivity.this, "Successfully deleted ", Toast.LENGTH_SHORT).show();
+    //            Intent intent = new Intent(AllPostActivity.this, VetScreen.class);
+    //            startActivity(intent);
+    //
+    //            return true;
+    //
+    //
+    //
+    //        }
+    //    });
 
     public void retriveData() {
 

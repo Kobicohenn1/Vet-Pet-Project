@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".VetStockManager"
+            android:exported="false" />
+        <activity
             android:name=".VetEditProfile"
             android:exported="false" />
         <activity
