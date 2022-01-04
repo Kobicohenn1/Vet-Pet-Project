@@ -16,14 +16,15 @@
         android:orientation="vertical"
         tools:context=".Information">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:gravity="center"
-            android:text="מידע למשתמש בעברית"
-            android:textColor="#38AA3D"
-            android:textSize="30sp" />
+    <TextView
+        android:id="@+id/tvVetPet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:text="מידע למשתמש בעברית"
+        android:textColor="#38AA3D"
+        android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -23,6 +23,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/logo"
+            android:id="@+id/tvVetPet"
             android:layout_marginTop="10dp"
             android:paddingVertical="100dp" />
 
