@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
         <activity
+            android:name=".ImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ApproveNewVet"
+            android:exported="false" />
+        <activity
             android:name=".AddPirsomet"
             android:exported="false" />
 
@@ -24,7 +30,6 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3183062838414181~8371106194" />
 
-        android:theme="@style/Theme.MyFirstApp">
         <activity
             android:name=".VetStockManager"
             android:exported="false" />

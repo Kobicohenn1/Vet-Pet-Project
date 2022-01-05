@@ -90,12 +90,6 @@
         android:text="Sign up"
         android:textSize="15dp" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:background="@drawable/ic_character"
-        android:paddingVertical="100dp" />
 
 
 </LinearLayout>

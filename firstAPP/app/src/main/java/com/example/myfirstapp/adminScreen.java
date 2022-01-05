@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class adminScreen extends AppCompatActivity implements View.OnClickListener {
-    Button btnLogout,btnPushNot,btnVetList ,btnEditQAadmin,btnUsersList,btnHealthEdit,btnVetProfile,btnAddP;
+    Button btnLogout,btnPushNot,btnVetList ,btnEditQAadmin,btnUsersList,btnHealthEdit,btnVetProfile,btnAddP,btnNewVets;
     private FirebaseAuth mAuth;
 
     @Override
@@ -26,6 +26,9 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
         btnUsersList = (Button)findViewById(R.id.btnUsers);
         btnHealthEdit = (Button)findViewById(R.id.btnHealthEdit);
         btnVetProfile = (Button)findViewById(R.id.btnVetProfile);
+        btnNewVets = (Button)findViewById(R.id.btnNewVets);
+
+        btnNewVets.setOnClickListener(this);
         btnVetProfile.setOnClickListener(this);
         btnHealthEdit.setOnClickListener(this);
         btnUsersList.setOnClickListener(this);
@@ -76,9 +79,12 @@ public class adminScreen extends AppCompatActivity implements View.OnClickListen
             Intent intent = new Intent(this , VetStockManager.class);
             startActivity(intent);
         }
-
         if(v == btnAddP) {
             Intent intent = new Intent(this, AddPirsomet.class);
+            startActivity(intent);
+        }
+        if(v == btnNewVets) {
+            Intent intent = new Intent(this, ApproveNewVet.class);
             startActivity(intent);
         }
     }
