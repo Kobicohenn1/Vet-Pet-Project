@@ -60,7 +60,7 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
-            android:text="Answer"
+            android:text="Answer - NFW"
             android:background="@android:color/black"/>
 
         <Button
@@ -81,7 +81,23 @@
             android:background="@android:color/black"
             android:id="@+id/btn_VetList"
             />
-
+        <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Open Wound"
+            android:background="@android:color/black"
+            android:id="@+id/btn_OpenWound"
+            />
+        <Button
+            android:id="@+id/btn_OWAnswer"
+            android:layout_marginTop="10dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Answer - OW"
+            android:background="@android:color/black"/>
         <Button
             android:id="@+id/btnLogOutClient"
             android:layout_marginTop="10dp"

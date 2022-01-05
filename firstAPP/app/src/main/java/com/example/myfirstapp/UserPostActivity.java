@@ -69,7 +69,6 @@ public class UserPostActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                //String id=dataSnapshot.child("uid").getValue().toString();
                 String uid= FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
                     posts = new ArrayList<Post>();
                     for (DataSnapshot data : dataSnapshot.getChildren()) {
