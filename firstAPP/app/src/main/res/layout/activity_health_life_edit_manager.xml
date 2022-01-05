@@ -11,30 +11,27 @@
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="כותרת" />
+        android:hint="Subject" />
     <EditText
         android:id="@+id/etTip"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="top"
-        android:hint="כתוב טיפ" />
+        android:hint="Content" />
     <Button
         android:id="@+id/btnSave"
         android:layout_width="100dp"
-        android:background="#c1112e"
-
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         android:text="save" />
 
     <Button
         android:id="@+id/btnAllTips"
         android:layout_width="100dp"
-        android:background="#c1112e"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         android:text="Tips list" />
 
 </LinearLayout>

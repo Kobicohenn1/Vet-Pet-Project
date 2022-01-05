@@ -44,7 +44,7 @@ public class HealthLifeEditManager extends AppCompatActivity implements View.OnC
     public void onClick(View v){
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
         postManagerTips p = new postManagerTips(uid,etTitle.getText().toString(),etTip.getText().toString(),0,"");
-        postManagerTipsRef = firebaseDatabase.getReference("HealthLife").push();
+        postManagerTipsRef = firebaseDatabase.getReference("HealthLife/").push();
         p.key = postManagerTipsRef.getKey();
         postManagerTipsRef.setValue(p);
     }

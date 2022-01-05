@@ -12,19 +12,20 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@drawable/logo"
+        android:layout_marginTop="10dp"
         android:paddingVertical="100dp" />
 
     <EditText
         android:id="@+id/etTitle"
-        android:layout_width="240dp"
+        android:layout_width="340dp"
         android:layout_height="50dp"
-        android:hint="נושא הפניה"
-        android:layout_gravity="right"
+        android:hint="Subject"
+        android:layout_gravity="left"
         android:textSize="20sp" />
 
     <EditText
-        android:hint="גוף הפניה "
-        android:layout_gravity="right"
+        android:hint="Content"
+        android:layout_gravity="left"
         android:layout_width="340dp"
         android:layout_height="300dp"
         android:id="@+id/etBody"
