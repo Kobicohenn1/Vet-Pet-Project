@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ClientScreenMain extends AppCompatActivity implements View.OnClickListener {
     private TextView welcome;
-    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell , btnInfo,btnVetList;
+    private Button btnAdd,btnLife,btnFaq,btnnfw,btnAnsFell , btnInfo,btnVetList,clickWound,btnAnsOw;
     private Button logout;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -42,6 +42,9 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnAnsFell=(Button)findViewById(R.id.btn_NFWellAnswer) ;
         btnInfo=(Button)findViewById(R.id.btn_Info);
         btnVetList = (Button)findViewById(R.id.btn_VetList);
+        clickWound=(Button)findViewById(R.id.btn_OpenWound);
+        btnAnsOw=(Button)findViewById(R.id.btn_OWAnswer) ;
+
         firebaseAuth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();// this user
 
@@ -53,6 +56,9 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         btnAnsFell.setOnClickListener(this);
         btnInfo.setOnClickListener(this);
         btnVetList.setOnClickListener(this);
+        clickWound.setOnClickListener(this);
+        btnAnsOw.setOnClickListener(this);
+
         reference= FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -102,6 +108,14 @@ public class ClientScreenMain extends AppCompatActivity implements View.OnClickL
         if(btnVetList == v)
         {
             startActivity(new Intent(this,VetData_User.class));
+        }
+        if(clickWound==v)
+        {
+            startActivity(new Intent(this,openWound.class));
+        }
+        if(btnAnsOw==v)
+        {
+            startActivity(new Intent(this,UserPostActivityOW.class));
         }
     }
 }

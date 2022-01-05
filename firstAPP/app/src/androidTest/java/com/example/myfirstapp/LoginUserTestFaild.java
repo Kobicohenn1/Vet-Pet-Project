@@ -62,5 +62,11 @@ public class LoginUserTestFaild {
 
         ViewInteraction materialButton2 = onView(allOf(withId(R.id.btn_loginVet), withText("Log in"), isDisplayed()));
         materialButton2.perform(click());
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

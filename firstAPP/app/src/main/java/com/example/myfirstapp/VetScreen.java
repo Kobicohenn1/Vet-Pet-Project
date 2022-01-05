@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class VetScreen extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnFell, btnLogout, btnWaiting, btnContact, btnHealth, btnEditQA,btnEditScreen;
+    Button btnFell, btnLogout, btnWaiting, btnContact, btnHealth, btnEditQA,btnEditScreen,btnEditOW;
 
     FirebaseAuth firebaseAuth;
 
@@ -28,6 +28,7 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         btnWaiting = (Button) findViewById(R.id.btnWaiting);
         btnContact = (Button) findViewById(R.id.btnContact);
         btnEditScreen = (Button)findViewById(R.id.btn_editScreen);
+        btnEditOW=(Button)findViewById(R.id.btnWound) ;
 
         btnHealth = (Button) findViewById(R.id.btnHealth);
 
@@ -39,7 +40,7 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         btnWaiting.setOnClickListener(this);
         btnEditScreen.setOnClickListener(this);
         btnHealth.setOnClickListener(this);
-
+        btnEditOW.setOnClickListener(this);
         btnEditQA.setOnClickListener(this);
 
     }
@@ -75,6 +76,10 @@ public class VetScreen extends AppCompatActivity implements View.OnClickListener
         }
         if(v == btnEditScreen){
             startActivity(new Intent(this,VetEditProfile.class));
+        }
+        if(v==btnEditOW){
+            startActivity(new Intent(this,AllPostActivityOW.class));
+
         }
     }
 }

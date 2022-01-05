@@ -34,6 +34,18 @@
             android:name=".VetStockManager"
             android:exported="false" />
         <activity
+            android:name=".UserPostActivityOW"
+            android:exported="false" />
+        <activity
+            android:name=".EditPostActivityOW"
+            android:exported="false" />
+        <activity
+            android:name=".AllPostActivityOW"
+            android:exported="false" />
+        <activity
+            android:name=".openWound"
+            android:exported="false" />
+        <activity
             android:name=".VetEditProfile"
             android:exported="false" />
         <activity
