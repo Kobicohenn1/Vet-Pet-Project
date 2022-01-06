@@ -28,9 +28,7 @@ public class AdminVetProfilesList {
 
     @Test
     public void adminVetProfilesList() {
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
         try {
             Thread.sleep(7000);
         } catch (InterruptedException e) {
@@ -41,9 +39,7 @@ public class AdminVetProfilesList {
                 allOf(withId(R.id.btn_loginAdmin), withText("Login Admin"), isDisplayed()));
         materialButton.perform(click());
 
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
         try {
             Thread.sleep(700);
         } catch (InterruptedException e) {
@@ -66,9 +62,7 @@ public class AdminVetProfilesList {
                 allOf(withId(R.id.btn_loginAdmin), withText("Log in"), isDisplayed()));
         materialButton2.perform(click());
 
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
         try {
             Thread.sleep(700);
         } catch (InterruptedException e) {

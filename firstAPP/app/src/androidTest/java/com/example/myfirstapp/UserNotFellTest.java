@@ -42,9 +42,7 @@ public class UserNotFellTest {
 
     @Test
     public void userNotFellTest() {
-         // Added a sleep statement to match the app's execution delay.
- // The recommended way to handle such scenarios is to use Espresso idling resources:
-  // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
 try {
  Thread.sleep(7000);
  } catch (InterruptedException e) {
@@ -55,9 +53,7 @@ try {
 allOf(withId(R.id.btn_login), withText("Login Client"), isDisplayed()));
         materialButton.perform(click());
         
-         // Added a sleep statement to match the app's execution delay.
- // The recommended way to handle such scenarios is to use Espresso idling resources:
-  // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
 try {
  Thread.sleep(700);
  } catch (InterruptedException e) {
@@ -75,10 +71,7 @@ allOf(withId(R.id.et_password), isDisplayed()));
         ViewInteraction materialButton2 = onView(
 allOf(withId(R.id.btn_login), withText("Log in"), isDisplayed()));
         materialButton2.perform(click());
-        
-         // Added a sleep statement to match the app's execution delay.
- // The recommended way to handle such scenarios is to use Espresso idling resources:
-  // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
 try {
  Thread.sleep(7000);
  } catch (InterruptedException e) {
@@ -89,9 +82,7 @@ try {
 allOf(withId(R.id.btn_NFWell), withText("Not Felling Well"), isDisplayed()));
         materialButton3.perform(click());
         
-         // Added a sleep statement to match the app's execution delay.
- // The recommended way to handle such scenarios is to use Espresso idling resources:
-  // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+
 try {
  Thread.sleep(700);
  } catch (InterruptedException e) {
