@@ -47,7 +47,7 @@ public class UserHealthLifeTest {
             e.printStackTrace();
         }
 
-        ViewInteraction materialButton = onView(allOf(withId(R.id.btn_login), withText("Login Client"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 3), isDisplayed()));
+        ViewInteraction materialButton = onView(allOf(withId(R.id.btn_login), withText("Login Client"), isDisplayed()));
         materialButton.perform(click());
 
         try {
@@ -56,19 +56,17 @@ public class UserHealthLifeTest {
             e.printStackTrace();
         }
 
-        ViewInteraction appCompatEditText = onView(allOf(withId(R.id.et_email), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 2), isDisplayed()));
+        ViewInteraction appCompatEditText = onView(allOf(withId(R.id.et_email), isDisplayed()));
         appCompatEditText.perform(click());
 
-        ViewInteraction appCompatEditText2 = onView(allOf(withId(R.id.et_email), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 2), isDisplayed()));
+        ViewInteraction appCompatEditText2 = onView(allOf(withId(R.id.et_email), isDisplayed()));
         appCompatEditText2.perform(replaceText("kobi20@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.et_password), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 3),isDisplayed()));
-        appCompatEditText3.perform(replaceText("12345678"), closeSoftKeyboard());
+                allOf(withId(R.id.et_password),isDisplayed()));appCompatEditText3.perform(replaceText("12345678"), closeSoftKeyboard());
 
         ViewInteraction materialButton2 = onView(
-                allOf(withId(R.id.btn_login), withText("Log in"),childAtPosition(childAtPosition(withClassName(is("android.widget.LinearLayout")), 4), 0),isDisplayed()));
-        materialButton2.perform(click());
+                allOf(withId(R.id.btn_login), withText("Log in"),isDisplayed()));materialButton2.perform(click());
 
         try {
             Thread.sleep(3000);
@@ -76,41 +74,9 @@ public class UserHealthLifeTest {
             e.printStackTrace();
         }
 
-        ViewInteraction materialButton3 = onView(allOf(withId(R.id.btn_Health), withText("Health Life Tips"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 2), isDisplayed()));
-        materialButton3.perform(click());
+        ViewInteraction materialButton3 = onView(allOf(withId(R.id.btn_Health), withText("Health Life Tips"), isDisplayed()));materialButton3.perform(click());
 
-        try {
-            Thread.sleep(700);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        DataInteraction linearLayout = onData(anything()).inAdapterView(allOf(withId(R.id.lv), childAtPosition(withClassName(is("android.widget.LinearLayout")), 0))).atPosition(0);
-        linearLayout.perform(click());
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
-    private static Matcher<View> childAtPosition(
-            final Matcher<View> parentMatcher, final int position) {
 
-        return new TypeSafeMatcher<View>() {
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("Child at position " + position + " in parent ");
-                parentMatcher.describeTo(description);
-            }
-
-            @Override
-            public boolean matchesSafely(View view) {
-                ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent)
-                        && view.equals(((ViewGroup) parent).getChildAt(position));
-            }
-        };
-    }
 }

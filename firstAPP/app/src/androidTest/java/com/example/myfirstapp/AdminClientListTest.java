@@ -42,7 +42,7 @@ public class AdminClientListTest {
         materialButton.perform(click());
 
         try {
-            Thread.sleep(700);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -60,7 +60,7 @@ public class AdminClientListTest {
         materialButton2.perform(click());
 
         try {
-            Thread.sleep(700);
+            Thread.sleep(3500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -75,8 +75,6 @@ public class AdminClientListTest {
             e.printStackTrace();
         }
 
-        ViewInteraction linearLayout = onView(
-                allOf(withClassName(is("android.widget.LinearLayout")), isDisplayed()));
-        linearLayout.perform(click());
+
     }
 }

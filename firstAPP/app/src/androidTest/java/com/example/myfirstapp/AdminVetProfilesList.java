@@ -21,14 +21,16 @@ import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class UserVetListTest {
+public class AdminVetProfilesList {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void userVetListTest() {
-
+    public void adminVetProfilesList() {
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
             Thread.sleep(7000);
         } catch (InterruptedException e) {
@@ -36,9 +38,12 @@ public class UserVetListTest {
         }
 
         ViewInteraction materialButton = onView(
-                allOf(withId(R.id.btn_login), withText("Login Client"), isDisplayed()));
+                allOf(withId(R.id.btn_loginAdmin), withText("Login Admin"), isDisplayed()));
         materialButton.perform(click());
 
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
             Thread.sleep(700);
         } catch (InterruptedException e) {
@@ -46,29 +51,32 @@ public class UserVetListTest {
         }
 
         ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.et_email), isDisplayed()));
+                allOf(withId(R.id.et_AdminEmail), isDisplayed()));
         appCompatEditText.perform(click());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.et_email), isDisplayed()));
-        appCompatEditText2.perform(replaceText("kobi20@gmail.com"), closeSoftKeyboard());
+                allOf(withId(R.id.et_AdminEmail), isDisplayed()));
+        appCompatEditText2.perform(replaceText("vetpetmanager@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.et_password), isDisplayed()));
-        appCompatEditText3.perform(replaceText("12345678"), closeSoftKeyboard());
+                allOf(withId(R.id.et_passwordAdmin), isDisplayed()));
+        appCompatEditText3.perform(replaceText("vet123456"), closeSoftKeyboard());
 
         ViewInteraction materialButton2 = onView(
-                allOf(withId(R.id.btn_login), withText("Log in"), isDisplayed()));
+                allOf(withId(R.id.btn_loginAdmin), withText("Log in"), isDisplayed()));
         materialButton2.perform(click());
 
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(7000);
+            Thread.sleep(700);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ViewInteraction materialButton4 = onView(
-                allOf(withId(R.id.btn_VetList), withText("Vet List"), isDisplayed()));
-        materialButton4.perform(click());
+        ViewInteraction materialButton3 = onView(
+                allOf(withId(R.id.btnVetProfile), withText("Vet Profiles"), isDisplayed()));
+        materialButton3.perform(click());
     }
 }

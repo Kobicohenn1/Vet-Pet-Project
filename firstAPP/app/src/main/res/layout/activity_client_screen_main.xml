@@ -63,6 +63,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginRight="5dp"
             android:text="Answer - NFW"
             android:background="@android:color/black"/>
@@ -93,6 +94,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
             android:text="Open Wound"
+            android:layout_gravity="center"
             android:background="@android:color/black"
             android:id="@+id/btn_OpenWound"
             />
@@ -101,6 +103,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginRight="5dp"
             android:text="Answer - OW"
             android:background="@android:color/black"/>
